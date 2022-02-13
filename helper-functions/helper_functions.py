@@ -9,8 +9,6 @@ import itertools
 import tensorflow as tf
 
 # Create a function to import an image and resize it to be able to be used with our model
-
-
 def load_and_prep_image(filename, img_shape=224, scale=True):
     """
     Reads in an image from filename, turns it into a tensor and reshapes into
@@ -113,8 +111,6 @@ def make_confusion_matrix(y_true, y_pred, classes=None, figsize=(10, 10), text_s
         fig.savefig("confusion_matrix.png")
 
 # Make a function to predict on images and plot them (works with multi-class)
-
-
 def pred_and_plot(model, filename, class_names):
     """
     Imports an image located at filename, makes a prediction on it with
@@ -161,8 +157,6 @@ def create_tensorboard_callback(dir_name, experiment_name):
 
 
 # Plot the validation and training data separately
-
-
 def plot_loss_curves(history):
     """
     Returns separate loss curves for training and validation metrics.
@@ -240,8 +234,6 @@ def compare_historys(original_history, new_history, initial_epochs=5):
 
 
 # Create function to unzip a zipfile into current working directory
-
-
 def unzip_data(filename):
     """
     Unzips filename into the current working directory.
@@ -254,10 +246,7 @@ def unzip_data(filename):
     zip_ref.close()
 
 
-# Walk through an image classification directory and find out how many files (images)
-# are in each subdirectory.
-
-
+# Walk through an image classification directory and find out how many files or images are in each subdirectiory
 def walk_through_dir(dir_path):
     """
     Walks through dir_path returning its contents.
@@ -277,8 +266,6 @@ def walk_through_dir(dir_path):
 
 
 # Function to evaluate: accuracy, precision, recall, f1-score
-
-
 def calculate_results(y_true, y_pred):
     """
     Calculates model accuracy, precision, recall and f1 score of a binary classification model.
